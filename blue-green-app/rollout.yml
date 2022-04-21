@@ -20,7 +20,6 @@ spec:
       # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`      
       autoPromotionEnabled: true
       autoPromotionSeconds: 60
-      antiAffinity: object
       previewReplicaCount: 3
       scaleDownDelaySeconds: 30
       scaleDownDelayRevisionLimit: 10
