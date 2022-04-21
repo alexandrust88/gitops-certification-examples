@@ -21,9 +21,9 @@ spec:
       autoPromotionEnabled: true
       autoPromotionSeconds: 60
       antiAffinity: object
-      previewReplicaCount: 10
-      scaleDownDelaySeconds: 60
-      scaleDownDelayRevisionLimit: 300
+      previewReplicaCount: 3
+      scaleDownDelaySeconds: 30
+      scaleDownDelayRevisionLimit: 10
   revisionHistoryLimit: 2000
   selector:
     matchLabels:
