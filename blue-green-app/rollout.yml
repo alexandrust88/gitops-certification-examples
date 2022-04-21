@@ -40,7 +40,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: docker.io/kostiscodefresh/gitops-canary-app:none
+        image: docker.io/kostiscodefresh/gitops-canary-app:latest
         ports:
         - name: http
           containerPort: 8080
