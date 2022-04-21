@@ -3,10 +3,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
   annotations:
+    notifications.argoproj.io/subscribe.on-rollout-completed.slack: staging-monitoring
     notifications.argoproj.io/subscribe.on-rollout-step-completed.slack: staging-monitoring
+    notifications.argoproj.io/subscribe.on-rollout-updated.slack: staging-monitoring
+    notifications.argoproj.io/subscribe.on-scaling-replicas-set.slack: staging-monitoring
+
   name: simple-rollout
 spec:
-  replicas: 2
+  replicas: 3
   strategy:
     blueGreen: 
       activeMetadata:
@@ -42,7 +46,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: nginx:latest
+        image: nginx:1.7.8
         ports:
         - name: http
           containerPort: 80
