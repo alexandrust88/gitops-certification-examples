@@ -2,6 +2,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Rollout
 metadata:
+  annotations:
+    notifications.argoproj.io/subscribe.on-rollout-step-completed.slack: staging-monitoring
   name: simple-rollout
 spec:
   replicas: 2
@@ -40,7 +42,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: docker.io/kostiscodefresh/gitops-canary-app:latest
+        image: docker.io/kostiscodefresh/gitops-canary-app:v3
         ports:
         - name: http
           containerPort: 8080
