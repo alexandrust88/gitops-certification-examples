@@ -10,7 +10,7 @@ metadata:
 
   name: simple-rollout
 spec:
-  replicas: 1
+  replicas: 2
   strategy:
     blueGreen:
       analysis:
