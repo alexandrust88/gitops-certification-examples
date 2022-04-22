@@ -14,7 +14,7 @@ spec:
   strategy:
     blueGreen:
       analysis:
-        templateName: success-rate
+        templateName: loq-error-rate
         args:
         - name: service-name
           value: staging-mainapi
