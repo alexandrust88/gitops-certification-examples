@@ -12,7 +12,12 @@ metadata:
 spec:
   replicas: 1
   strategy:
-    blueGreen: 
+    blueGreen:
+      analysis:
+        templateName: success-rate
+        args:
+        - name: service-name
+          value: staging-mainapi
       activeMetadata:
         labels:
           role: active
