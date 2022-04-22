@@ -15,7 +15,7 @@ spec:
     blueGreen:
       postPromotionAnalysis:
         templates: 
-        - loq-error-rate
+        - templateName: loq-error-rate
         args:
         - name: service-name
           value: staging-mainapi
