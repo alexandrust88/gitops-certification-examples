@@ -43,7 +43,7 @@ spec:
       # stack as soon as the ReplicaSet are completely ready/available.
       # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`      
       autoPromotionEnabled: true
-      autoPromotionSeconds: 60
+      autoPromotionSeconds: 1
       previewReplicaCount: 1
       scaleDownDelaySeconds: 30
       scaleDownDelayRevisionLimit: 10
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: nginx:1.7.11
+        image: nginx:1.7.12
         ports:
         - name: http
           containerPort: 80
