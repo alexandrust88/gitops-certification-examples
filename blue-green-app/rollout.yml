@@ -10,7 +10,7 @@ metadata:
 
   name: simple-rollout
 spec:
-  replicas: 20
+  replicas: 10
   strategy:
     blueGreen:
 #       prePromotionAnalysis:
@@ -42,7 +42,7 @@ spec:
       # immediately before the promotion. If omitted, the default behavior is to promote the new
       # stack as soon as the ReplicaSet are completely ready/available.
       # Rollouts can be resumed using: `kubectl argo rollouts promote ROLLOUT`      
-      autoPromotionEnabled: true
+      autoPromotionEnabled: false
       autoPromotionSeconds: 1
       previewReplicaCount: 1
       scaleDownDelaySeconds: 30
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: nginx:latest
+        image: nginx:1.7.1
         ports:
         - name: http
           containerPort: 80
