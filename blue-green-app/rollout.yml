@@ -10,7 +10,7 @@ metadata:
 
   name: simple-rollout
 spec:
-  replicas: 2
+  replicas: 20
   strategy:
     blueGreen:
 #       prePromotionAnalysis:
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
       - name: webserver-simple
-        image: nginx:1.7.12
+        image: nginx:latest
         ports:
         - name: http
           containerPort: 80
