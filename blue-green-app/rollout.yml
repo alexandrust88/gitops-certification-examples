@@ -13,18 +13,18 @@ spec:
   replicas: 1
   strategy:
     blueGreen:
-      prePromotionAnalysis:
-        templates: 
-        - templateName: loq-error-rate
-        args:
-        - name: service-name
-          value: staging-mainapi
-      postPromotionAnalysis:
-        templates: 
-        - templateName: loq-error-rate
-        args:
-        - name: service-name
-          value: staging-mainapi
+#       prePromotionAnalysis:
+#         templates: 
+#         - templateName: loq-error-rate
+#         args:
+#         - name: service-name
+#           value: staging-mainapi
+#       postPromotionAnalysis:
+#         templates: 
+#         - templateName: loq-error-rate
+#         args:
+#         - name: service-name
+#           value: staging-mainapi
       activeMetadata:
         labels:
           role: active
